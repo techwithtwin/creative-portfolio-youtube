@@ -26,4 +26,9 @@ export default function RootLayout({
 export const metadata: Metadata = {
   title: "Portfolio | TechWithTwin",
   description: "Developer Portfolio by TechWithTwin",
+  creator: "TechWithTwin",
+  icons: {
+    icon: "/boni.png",
+  },
+  keywords: ["TechWithTwin"],
 };
