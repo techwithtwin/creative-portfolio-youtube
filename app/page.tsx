@@ -1,5 +1,5 @@
-import { Button } from "@chakra-ui/react";
+import { Hero } from "@/components/home";
 
 export default function Home() {
-  return <Button>Hello World</Button>;
+  return <Hero />;
 }

@@ -1,18 +1,51 @@
-import { Button, Flex, Heading, Text } from "@chakra-ui/react";
+import { marginX } from "@/utils/constants";
+import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
 import React from "react";
 
 const Navbar = () => {
   return (
-    <Flex as="nav" justify="space-between">
-      <Heading>TechWithTwin</Heading>
+    <Box borderBottom="1px solid var(--chakra-colors-gray-700)">
+      <Flex
+        as="nav"
+        align="center"
+        justify="space-between"
+        py="1rem"
+        mx={marginX}
+      >
+        <Heading
+          fontSize="3xl"
+          bg="linear-gradient(95deg,#059dff 15%,#6549d5 45%,#e33fa1 75%,#fb5343 100%) 98% / 200% 100%"
+          backgroundClip="text"
+        >
+          TechWithTwin.
+        </Heading>
 
-      <Flex>
-        {navItems.map((item, i) => (
-          <Text key={i}>{item.label}</Text>
-        ))}
+        <Flex gap={4}>
+          {navItems.map((item, i) => (
+            <Text
+              _hover={{
+                color: "primary",
+              }}
+              key={i}
+              fontSize="lg"
+              fontWeight="semibold"
+              color="gray.400"
+            >
+              {item.label}
+            </Text>
+          ))}
+        </Flex>
+        <Button
+          bg="linear-gradient(95deg,#059dff 15%,#6549d5 45%,#e33fa1 75%,#fb5343 100%) 95%/200% 100%"
+          borderRadius="xl"
+          textTransform="uppercase"
+          color="white"
+          fontWeight="semibold"
+        >
+          Contact Me
+        </Button>
       </Flex>
-      <Button>Contact Me</Button>
-    </Flex>
+    </Box>
   );
 };
 
