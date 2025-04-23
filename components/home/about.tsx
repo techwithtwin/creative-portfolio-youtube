@@ -19,12 +19,12 @@ const AboutMe = () => {
       as="section"
       pos="relative"
       mt="-2rem"
-      mb="10rem"
+      mb={{ base: "5rem", md: "10rem" }}
       borderRadius="xl"
       bg="black"
       overflow="hidden"
       p={4}
-      w="60vw"
+      w={{ base: "90vw", lg: "60vw" }}
       mx="auto"
       _before={{
         content: "''",

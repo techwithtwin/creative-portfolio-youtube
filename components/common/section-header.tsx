@@ -17,10 +17,10 @@ const SectionHeader = ({ subHeading, mainHeading, description }: Props) => {
       >
         {subHeading}
       </Text>
-      <Heading fontSize="3xl" lineHeight="3xl">
+      <Heading fontSize="3xl" lineHeight="3xl" textAlign="center">
         {mainHeading}
       </Heading>
-      <Text color="gray.400" fontSize="lg">
+      <Text color="gray.400" fontSize="lg" textAlign="center">
         {description}
       </Text>
     </>

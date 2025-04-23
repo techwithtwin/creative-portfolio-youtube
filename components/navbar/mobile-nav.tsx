@@ -4,9 +4,16 @@ import { Box, CloseButton, Drawer, Portal, Text } from "@chakra-ui/react";
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { navItems } from ".";
+import { useRouter } from "next/navigation";
 
 const MobileNav = () => {
   const [open, setOpen] = useState(false);
+  const router = useRouter();
+
+  const handleNavigate = (to: string) => {
+    setOpen(false);
+    router.push(to);
+  };
 
   return (
     <Drawer.Root open={open} onOpenChange={(e) => setOpen(e.open)}>
@@ -23,7 +30,13 @@ const MobileNav = () => {
             <Drawer.Body spaceY={6}>
               {navItems.map((item, i) => (
                 <>
-                  <Text key={i} fontSize="xl" fontWeight="semibold">
+                  <Text
+                    onClick={() => handleNavigate(item.href)}
+                    py={3}
+                    key={i}
+                    fontSize="xl"
+                    fontWeight="semibold"
+                  >
                     {item.label}
                   </Text>
                   <hr />

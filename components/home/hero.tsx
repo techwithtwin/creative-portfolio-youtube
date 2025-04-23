@@ -11,7 +11,7 @@ const HeroSection = () => {
       bgSize="cover"
       bgPos="50% 90%"
     >
-      <Flex mx={marginX} h="90vh" align="center">
+      <Flex mx={marginX} h={{ base: "80vh", lg: "90vh" }} align="center">
         <Stack align="center" gap={6}>
           <Heading
             as="h1"
@@ -29,12 +29,7 @@ const HeroSection = () => {
               Bonface Maina
             </Box>
           </Heading>
-          <Button
-            variant="outline"
-            size="xl"
-            w="fit-content"
-            borderRadius="2xl"
-          >
+          <Button variant="subtle" size="xl" w="fit-content" borderRadius="2xl">
             Contact Me
           </Button>
         </Stack>

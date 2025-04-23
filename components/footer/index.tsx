@@ -8,7 +8,12 @@ const Footer = () => {
       py="1rem"
       borderTop="2px solid var(--chakra-colors-gray-700)"
     >
-      <Flex justify="space-between" mx={marginX}>
+      <Flex
+        justify="space-between"
+        flexDir={{ base: "column", md: "row" }}
+        mx={marginX}
+        gap={2}
+      >
         <Flex gap={2}>
           {footerItems.map((item) => (
             <Text color="gray.400" key={item}>
@@ -26,4 +31,4 @@ const Footer = () => {
 
 export default Footer;
 
-const footerItems = ["Privacy Policy", "Terms And Conditions", "Contact Us"];
+const footerItems = ["Privacy Policy", "Terms And Conditions", "Contact"];
