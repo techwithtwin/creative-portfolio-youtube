@@ -1,8 +1,10 @@
 import { marginX } from "@/utils/constants";
 import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
 import React from "react";
+import MobileNav from "./mobile-nav";
 
 const Navbar = () => {
+  const threshold = "lg";
   return (
     <Box borderBottom="1px solid var(--chakra-colors-gray-700)">
       <Flex
@@ -20,7 +22,7 @@ const Navbar = () => {
           TechWithTwin.
         </Heading>
 
-        <Flex gap={4}>
+        <Flex gap={4} hideBelow={threshold}>
           {navItems.map((item, i) => (
             <Text
               _hover={{
@@ -36,6 +38,7 @@ const Navbar = () => {
           ))}
         </Flex>
         <Button
+          hideBelow={threshold}
           bg="linear-gradient(95deg,#059dff 15%,#6549d5 45%,#e33fa1 75%,#fb5343 100%) 95%/200% 100%"
           borderRadius="xl"
           textTransform="uppercase"
@@ -44,6 +47,9 @@ const Navbar = () => {
         >
           Contact Me
         </Button>
+        <Box hideFrom={threshold}>
+          <MobileNav />
+        </Box>
       </Flex>
     </Box>
   );
@@ -51,7 +57,7 @@ const Navbar = () => {
 
 export default Navbar;
 
-const navItems = [
+export const navItems = [
   {
     label: "Home",
     href: "#home",
