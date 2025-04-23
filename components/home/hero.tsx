@@ -4,7 +4,13 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <Box bgImage="url(/bg.jpg)" bgSize="cover" bgPos="50% 90%">
+    <Box
+      as="section"
+      id="home"
+      bgImage="url(/bg.jpg)"
+      bgSize="cover"
+      bgPos="50% 90%"
+    >
       <Flex mx={marginX} h="90vh" align="center">
         <Stack align="center" gap={6}>
           <Heading

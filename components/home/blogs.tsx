@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const Blogs = () => {
   return (
-    <Stack as="section" mx={marginX} align="center" my="5rem">
+    <Stack id="blogs" as="section" mx={marginX} align="center" my="5rem">
       <SectionHeading
         subHeading="Latest News"
         mainHeading="Our Latest News"

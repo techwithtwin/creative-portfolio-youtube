@@ -5,7 +5,7 @@ import React from "react";
 
 const Brands = () => {
   return (
-    <Box my="4rem" mx={marginX}>
+    <Box as="section" id="brands" my="4rem" mx={marginX}>
       <SimpleGrid justifyItems="center" columns={{ base: 2, md: 4 }} gap={6}>
         {[1, 2, 3, 4].map((item) => (
           <Box as="span" key={item}>

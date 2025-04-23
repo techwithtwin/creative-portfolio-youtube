@@ -2,6 +2,12 @@ import { createSystem, defaultConfig, defineConfig } from "@chakra-ui/react";
 import { headingRecipe } from "./heading.recipe";
 
 const config = defineConfig({
+  globalCss: {
+    "*::selection": {
+      bg: "secondary",
+      color: "white",
+    },
+  },
   theme: {
     tokens: {
       colors: {
@@ -51,10 +57,3 @@ const config = defineConfig({
 });
 
 export const system = createSystem(defaultConfig, config);
-
-/*
-primary -> #059dff
-secondary -> #fb5343
-pink -> #e33fa1
-
-*/

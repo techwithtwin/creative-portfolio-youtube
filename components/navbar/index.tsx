@@ -54,17 +54,22 @@ export default Navbar;
 const navItems = [
   {
     label: "Home",
+    href: "#home",
   },
   {
     label: "About",
+    href: "#about",
   },
   {
     label: "Brands",
+    href: "#brands",
   },
   {
     label: "Portfolio",
+    href: "#projects",
   },
   {
     label: "Blog",
+    href: "#blogs",
   },
 ];

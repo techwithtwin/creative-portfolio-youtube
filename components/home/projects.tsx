@@ -69,7 +69,13 @@ const ProjectCard = ({
   label: string;
 }) => {
   return (
-    <Stack bg="gray.800" overflow="hidden" borderRadius="xl">
+    <Stack
+      as="section"
+      id="projects"
+      bg="gray.800"
+      overflow="hidden"
+      borderRadius="xl"
+    >
       <Box height="20rem">
         <Image
           src={thumbnail}

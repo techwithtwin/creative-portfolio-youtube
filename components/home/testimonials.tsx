@@ -26,6 +26,8 @@ export default Testimonials;
 const TestimonialCard = () => {
   return (
     <Stack
+      as="section"
+      id="testimonials"
       align="center"
       textAlign="center"
       p="2rem"

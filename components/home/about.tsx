@@ -15,6 +15,8 @@ import { MdLocationOn, MdWork } from "react-icons/md";
 const AboutMe = () => {
   return (
     <Box
+      id="about"
+      as="section"
       pos="relative"
       mt="-2rem"
       mb="10rem"
