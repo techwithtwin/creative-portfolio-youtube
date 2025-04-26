@@ -24,17 +24,18 @@ const Navbar = () => {
 
         <Flex gap={4} hideBelow={threshold}>
           {navItems.map((item, i) => (
-            <Text
-              _hover={{
-                color: "primary",
-              }}
-              key={i}
-              fontSize="lg"
-              fontWeight="semibold"
-              color="gray.400"
-            >
-              {item.label}
-            </Text>
+            <a key={i} href={item.href}>
+              <Text
+                _hover={{
+                  color: "primary",
+                }}
+                fontSize="lg"
+                fontWeight="semibold"
+                color="gray.400"
+              >
+                {item.label}
+              </Text>
+            </a>
           ))}
         </Flex>
         <Button
