@@ -16,8 +16,8 @@ const HeroSection = () => {
           <Heading
             as="h1"
             textAlign="center"
-            fontSize="5rem"
-            lineHeight="5rem"
+            fontSize={{ base: "3rem", md: "5rem" }}
+            lineHeight={{ base: "3.4rem", md: "5rem" }}
             fontWeight="extrabold"
           >
             Hey! I&apos;m <br />
