@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Provider } from "./providers";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 const inter = Inter({
   weight: ["400", "500", "600", "700"],
@@ -17,7 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <Provider>{children}</Provider>
+        <Provider>
+          <Navbar />
+          {children}
+          <Footer />
+        </Provider>
       </body>
     </html>
   );
